@@ -1,0 +1,545 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>CTC++ for Java and Android&reg; add-on</title>
+
+		<meta name="description" content="Making code coverage easy on any Android device">
+		<meta name="author" content="Roland B&auml;r">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/twiddletec.css">
+		<link rel="stylesheet" href="css/theme/beige.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+		<!-- script src="js/twiddletec.js"></script> -->
+	</head>
+
+	<body >
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+			  <section>
+				<section>
+					<h1>CTC++ for Java and Android</h1>
+					<h3>Industrial proofed Code Coverage made easy</h3>
+					<p>
+						<small>Created by <a href="http://www.verifysoft.com/de_corporate.html">Roland B&auml;r</a> / <a href="http://twitter.com/verifysoft">@verifysoft</a></small>
+					</p>
+					<aside class="notes">Hier Einführung, we are from black forest u.ä.</aside>
+				</section>
+				<section id="transitions">
+					<h2>Transition Styles</h2>
+					<p>
+						You can select from different transitions, like: <br>
+						<a href="?transition=cube#/transitions">Cube</a> -
+						<a href="?transition=page#/transitions">Page</a> -
+						<a href="?transition=concave#/transitions">Concave</a> -
+						<a href="?transition=zoom#/transitions">Zoom</a> -
+						<a href="?transition=linear#/transitions">Linear</a> -
+						<a href="?transition=fade#/transitions">Fade</a> -
+						<a href="?transition=none#/transitions">None</a> -
+						<a href="?#/transitions">Default</a>
+					</p>
+				</section>
+
+				<section id="themes">
+					<h2>Themes</h2>
+					<p>
+						Reveal.js comes with a few themes built in: <br>
+						<a href="?theme=sky#/themes">Sky</a> -
+						<a href="?theme=solarized#/themes">Solarized</a> -
+						<a href="?theme=moon#/themes">Moon</a> -
+						<a href="?theme=beige#/themes">Beige</a> -
+						<a href="?theme=simple#/themes">Simple</a> -
+						<a href="?theme=serif#/themes">Serif</a> -
+						<a href="?theme=night#/themes">Night</a> -
+						<a href="?#/themes">Default</a>
+					</p>
+					<p>
+						<small>
+							* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
+						</small>
+					</p>
+				</section>
+
+			  </section>
+			  <section>
+			    <section>
+			    <h1>What is Testwell CTC++</h1>
+			    <p>
+			      <ul> 
+				<li>A proprietary tool of <a href="http://www.testwell.fi/" target="_blank">Testwell Oy</a>, Tampere, Finland
+					      <li>Prooven history, industrie standard solution
+					      <li>With Host-Target add-on work with any compiler on any target
+					      <li>With Bitcov add-on also on e.g. 8-bit &micro;Controller
+					      <li>With CTC++ Java and Android add-on  for ... Android 
+					      <li>With CTC++ C# add-on  for e.g. xbox and windows phone 7
+						<ul>
+			    </p>
+			    
+			    <aside class="notes">
+			      
+			    </aside>
+			    </section>
+			    <section>
+				<ul>
+				  <li>Microsoft compiler
+				    <ul>
+				      <li>cl on host, both 32 and 64 bit
+				      <li>cl for Smartphones and PocketPC
+				      <li>csc C# compiler
+				      <li>vjc J# compiler
+				    </ul>
+				  <li>Borland/Inprise/Paradigm/Codegear compilers 
+				    <ul>
+				      <li>bcc, bcc32
+				      <li>pcc, pcc32 (Paradigm)
+				    </ul>
+				  <li>gcc and all gcc based cross-compilers.
+				  <li><a href="http://dragonegg.llvm.org/">DragonEgg</a>
+				  <li>IAR compilers and toolchains
+				    <ul>
+				      <li> iccm16c
+				      <li> icc430
+				      <li> icc8051
+				      <li> iccarm
+				      <li> iccavr
+				      <li> iccavr32
+				      <li> icccf
+				      <li> icchcs12
+				      <li> iccmaxq
+				      <li> iccdspic
+				      <li> iccpic18
+				      <li> icccr16c
+				      <li> icc78k
+				      <li> icc78k0r
+				      <li> iccv850
+				      <li> icch8
+				      <li> iccm32c
+				      <li> iccr32c
+				      <li> iccsam8
+				      <li> iccrx
+				      <li> iccmk8
+				      <li> <a href="http://www.iar.com/ewstm8">iccstm8</a>
+				      <li> <a href="http://www.iar.com/ewrl78">iccrl78</a>
+				    </ul>
+				  <li>Intel compilers (all platforms)
+				    <ul>
+				      <li>icc 
+				      <li>ic86, ic96 
+				    </ul>
+				  <li>Keil compiler
+				    <ul>
+				      <li>c51, c166, c251, ca
+				      <li>cx51, cx2, tcc
+				      <li>armcc
+				    </ul>
+				  <li>Sun compilers
+				    <ul>
+				      <li>WorkShop compilers
+				      <li>javac
+				    </ul>
+				  <li>HP
+				    <ul>
+				      <li>HPUX CC, HP C++
+				      <li>aCC 
+				    </ul>
+				  <li>Java compilers
+				    <ul>
+				      <li>javac
+				      <li>jikes
+				      <li>ecj
+				      <li>gcj
+				      <li>kaffe
+				    </ul>
+				  <li>Mono compilers
+				    <ul>
+				      <li>mcs
+				      <li>gmcs
+				      <li>smcs
+				    </ul>
+				  <li>Symbian
+				    <ul>
+				      <li>mwccsym2
+				      <li>armcc
+				      <li>arm-none-symbianelf-g++ (GCCE)
+				    </ul>
+				  <li>HI-Tech PICC compilers (Windows and Linux)
+				    <ul>
+				      <li>picc, picc18, picc32, dspicc
+				      <li>xc16-gcc, xc32-gcc
+				    </ul>
+				  <li><a href="http://clang.llvm.org">LLVM</a>
+				    <ul>
+				      <li>clang, clang++
+				    </ul>
+				  <li>Microchip MPLAB C Compiler
+				    <ul>
+				      <li>pic30-gcc
+				      <li>pic32-gcc
+				    </ul>
+				  <li>VisualDSP++ 
+				    <ul>
+				      <li>ccblkfn 
+				      <li>cc21k
+				      <li>ccts
+				    </ul>
+				  <li>Renesas
+				    <ul>
+				      <li>shc, shcpp, ch38, ccrx
+				      <li>nc, nc308, nc77, nc79A
+				    </ul>
+				  <li>TI Code Composer Studio (Windows)
+				    <ul>
+				      <li>cl2000 
+				      <li>cl16x
+				      <li>cl470
+				      <li>cl55
+				      <li>cl500
+				      <li>cl430
+				    </ul>
+				  <li>Texas Instruments Linux compilers
+				    <ul>
+				      <li>cl2000 
+				      <li>cl16x
+				      <li>cl470
+				      <li>cl55
+				      <li>cl500
+				      <li>cl430
+				    </ul>
+				  <li>Cosmic compilers
+				    <ul>
+				      <li> cx6805
+				      <li> cx6808
+				      <li> cx6812
+				      <li> cxs12x
+				      <li> cxxgate
+				      <li> cx6811
+				      <li> cx6816
+				      <li> cx332
+				      <li> cxst10
+				      <li> cxstm8
+				      <li> cxst7
+				    </ul>
+				  <li>Metaware
+				    <ul>
+				      <li>hcarm and others
+				    </ul>
+				  <li>GHS/GreenHills/Multi
+				    <ul>
+				      <li>ccv850, cxv850, ccv850e
+				      <li>ccmips, cxmips
+				      <li>ccarm, cxarm
+				      <li>ccppc, cxppc
+				      <li>gcc (GreenHill, not GNU)
+				    </ul>
+				  <li>Pathscale pathcc/pathCC
+				  <li>Altium Tasking 
+				    <ul>
+				      <li>classic toolsets
+				      <li>VX-toolset toolsets
+				    </ul>
+				    <ul>
+				      <li>c166
+				      <li>cc166
+				      <li>ccm16c
+				      <li>cc51
+				    </ul>
+				  <li>Fujitsu/Softune
+				    <ul>
+				      <li>fcc896s
+				      <li>fcc907s
+				      <li>fcc911s
+				    </ul>
+				  <li>Motorola
+				    <ul>
+				      <li>chc12 
+				      <li>chc08 
+				    </ul>
+				  <li>Windriver
+				    <ul>
+				      <li> ccarm
+				      <li> ccsimpc
+				      <li> g++simpc
+				      <li> g++arm
+				      <li> cchppa
+				      <li> ccsimso
+				      <li> ccsparc
+				      <li> cc68k
+				      <li> cc386
+				      <li> cc960
+				      <li> ccmips
+				      <li> ccppc
+				    </ul>
+				    <ul>
+				      <li> Diab dcc
+				    </ul>
+				  <li>Trimedia
+				    <ul>
+				      <li>tmcc
+				    </ul>
+				  <li>Matlab/Simulink 
+				    <ul>
+				      <li>lcc
+				    </ul>
+				  <li>Mitsubishi
+				    <ul>
+				      <li>nc30, nc308
+				      <li>nc77
+				      <li>nc79
+				    </ul>
+				  <li>Hitatchi
+				    <ul>
+				      <li>shc, shcpp
+				      <li>ch38
+				      <li>ccrx
+				    </ul>
+				  <li>Freescale/Metrowerks
+				    <ul>
+				      <li>mwccmcf
+				      <li>mwcceppc
+				      <li>mwccmcore
+				      <li>mwcc56800, mwcc56800e
+				    </ul>
+				    <ul>
+				      <li>chc12 
+				      <li>chc08 
+				    </ul>
+				  <li><a href="http://www.ceva-dsp.com/CEVA-Software-Development-Tools.html">Ceva DSP compiler</a>
+				    <ul>
+				      <li>all &ndash; just use gcc settings 
+				    </ul>
+				</ul>
+			    </section>
+			  </section>
+			  
+			  <section>
+			    <h1>What it does</h1>
+			    <ul>
+			      <li>			  measuring test coverage
+			      <li>dynamic analyses
+			      <li>at any testing phase
+			      <li>for C and C++ code
+			      <li>for Java
+			    </ul>
+			  </section>
+			  <section> 
+			    <h2>Advantages&hellip;</h2>
+			    <ul>
+			      <li>Source code based
+			      <li>Doesn't require debug build
+			      <li>No integration in build files needed, more unwanted
+			      <li>Works transparently to the build system
+			      <li>With Ant, Maven, ndk-build . . .
+			      <li>No shadow directories
+			      <li>SDK, NDK, Kernel . . .
+			      <li>Works on non-rooted phones/tablets
+			      <li> Works on release devices
+			    </ul>
+			    
+			  </section>
+			  <section>
+			    <h2>Example Report</h2>
+			    <iframe scrolling="no" seamless="seamless" class="fit" width="100%" height="500px" src="CTCHTML.reveal/indexD1.html#a1"></iframe>
+			  </section>
+			  <section>
+			    <h2>Android applications with SDK</h2>
+			    <h3>One time setup</h3>
+			    <tt>ctc.jar</tt> as to be added to the <tt>$CLASSPATH</tt>
+			    <pre><code class="bash"> 
+#!/bin/bash
+
+if ("x$CLASSPATH" eq "x") then
+    export CLASSPATH=/usr/local/lib/ctc.jar:.
+else 
+    export CLASSPATH=$CLASSPATH:/usr/local/lib/ctc.jar
+fi
+			    </code></pre>
+			      
+			  </section>
+			  <section>
+			    <h2>Android applications with SDK</h2>
+			    <h3>Compiling</h3>
+			    <ul>
+			      <li> Mention the function to trigger data write out in javactc.ini
+			    </ul>
+			    <pre><code class="bash">
+#/bin/bash
+# Build it with ant, only properties to be added
+ant debug -Dbuild.compiler=fi.testwell.ant.ctc \
+        -Dbuild.compiler.ctcopts="-i m"
+# Install it on your device
+adb install -r bin/PACKAGENAME.apk
+# Now run it, play around, get coverage data
+
+</code></pre>
+			  </section>
+			  <section>
+			    <h2>Android applications with SDK</h2>
+			    <h3>Data transfer up to report</h3>
+			    <pre><code class="bash">#!/bin/bash
+#Getting report out of device
+#Getting MON.txt
+adb pull /data/data/PACKAGENAME/MON.txt . 
+#Convert date
+ctc2dat -i MON.txt && rm MON.txt
+# We have a MON.dat
+# Proceed as on host
+ctcpost MON.dat -p - | ctc2html
+firefox <a href="CTCHTML.reveal/index.html" target="_blank">CTCHTML/index.html</a>
+</code></pre>
+			    </section>
+			  <section>
+			    <h2>Android applications with NDK</h2>
+			    <h3>CTC++ preparations for NDK</h3>
+
+			    <ul>
+			      <li title="*.c and *.h files from /usr/local/lib/ctc/android/ndk/"> Copy Host-Target source files to jni/
+			      <li>Add entries for targ*.c to jni/Android.mk 
+				<pre><code class="ini">
+LOCAL_SRC_FILES := plasma.c targdata.c targcust.c \
+                     targsend.c
+</code></pre>
+			      <li>Mention function name to trigger data writeout
+				<pre><code class="ini">EMBED_FUNCTION_NAME = android_main</pre></code>
+			    </ul>
+			    
+			    
+			  </section>
+			  <section>
+  			    <h2>Android applications with NDK</h2>
+			    <h3>Building</h3>
+			    <ul>
+			      <li>Invoke your build with&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<pre><code class="bash">ndk-build TARGET_CC="ctc -i m arm-linux-androideabi-gcc"</code></pre>
+			      <li>Build then the package with
+				<pre><code class="bash">ant debug</code></pre>
+			      <li>Install it with
+				<pre><code class="bash">adb install -r bin/PACKAGENAME-debug.apk</pre></code>
+			      <li>Run your application and test as usual
+			    </ul>
+			  </section>
+			  <section>
+			    <h2>Android applications with SDK</h2>
+			    <h3>Data transfer up to report</h3>
+			    <pre><code class="bash">#!/bin/bash
+#Getting report out of device
+#Getting MON.txt
+adb pull /data/data/PACKAGENAME/MON.txt . 
+#Convert date
+ctc2dat -i MON.txt && rm MON.txt
+# We have a MON.dat
+# Proceed as on host
+ctcpost MON.dat -p - | ctc2html
+firefox <a href="CTCHTML.reveal/index.html" target="_blank">CTCHTML/index.html</a>
+</code></pre>
+			    
+			  </section>
+			  <section>
+			    <h2>Coverage on a running Android/Linux kernel</h2>
+			    <h3>Setup</h3>
+			    <ul>
+			      <li>untar <tt>ctc7kernel26.tar</tt> into kernel top-level directory &hellip;
+			      <li>&hellip; for modules, then <pre><code class="bash">make -C /lib/modules/`uname -r`/build</code></pre>
+			      <li>You can set a subset of files/directories in <tt>.ctc.ini</tt>
+			    </ul>
+			  </section>
+			  <section>
+			    <h2>Coverage on a running Android/Linux kernel</h2>
+			    <h3>Building</h3>
+			    <ul>
+			      <li>Just invoke <pre><code class="bash">make CC="ctc arm-linux-androideabi-gcc" &hellip;</code></pre>
+			      <li>Don't modify CC variable in between, it will rebuild all
+			    </ul>
+			  </section>
+			  <section>
+			    <h2>Coverage on a running Android/Linux kernel</h2>
+			    <h3>Preparation on the device</h3>
+			    Coverage data dump is done via a character device                                                                                        <ul>
+			      <li>busybox must be installed on Android
+			      <li>At device create the device node with <pre><code class="bash">mknod /dev/ctc_coverage c 240 0</code></pre>
+			    </ul>
+			  </section>
+			  <section>
+			    <h2>Coverage on a running Android/Linux kernel</h2>
+			    <h3>Data transfer</h3>
+			    Transfer the data from target to host and convert on the fly
+			    <pre><code class="bash">adb shell cat /dev/ctc_coverage | ctc2dat </code></pre>
+			  </section>
+			  <section>
+			    <h2>Coverage on a running Android/Linux kernel</h2>
+			    <h3>Report generating</h3>
+<pre><code class="bash">ctcpost MON.dat | ctc2html
+firefox CTCHTML/index.html</code></pre>
+			  </section>
+			  <section>
+			    <h1>The end</h1>
+			    <p>
+			      <small> <a href="http://www.verifysoft.com/en_evals.html" target="_blank">Evalution copies available</a></small>
+			    </p>
+			    <p>
+			      <small>Created by <a href="http://www.verifysoft.com/de_corporate.html">Roland B&auml;r</a> / <a href="http://twitter.com/verifysoft">@verifysoft</a></small>
+			    </p>
+			  </section>
+			    
+			  </section>
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+			window.addEventListener("mouseover", handleClick, false);
+			function handleClick(e) {
+			document.body.focus();			    
+			}
+		</script>
+
+	</body>
+</html>
