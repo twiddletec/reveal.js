@@ -507,6 +507,10 @@ firefox CTCHTML/index.html</code></pre>
 
 		</div>
 
+<div class="share-reveal" style="display: none; position: absolute; bottom: 10px; left: 10px; margin-left: 1px; z-index: 20;">
+  <a href="http://www.verifysoft.com/">www.verifysoft.com</a>
+</div>
+<a class="fork-reveal" style="display: none;" href="http://www.verifysoft.com/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="logoor.png" alt="www.verifysoft.de"></a>
 		<script src="lib/js/head.min.js"></script>
 		<script src="js/reveal.min.js"></script>
 
@@ -540,6 +544,11 @@ firefox CTCHTML/index.html</code></pre>
 			document.body.focus();			    
 			}
 		</script>
-
+		<script>
+		  if( !navigator.userAgent.match( /iphone|ipod|android|ipad|blackberry/gi ) && !!document.querySelector ) {
+		  document.querySelector( '.share-reveal' ).style.display = 'block';
+		  document.querySelector( '.fork-reveal' ).style.display = 'block';
+		  }
+		</script>
 	</body>
 </html>
