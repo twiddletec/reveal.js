@@ -48,7 +48,8 @@ module.exports = function(grunt) {
 					'css/theme/simple.css': 'css/theme/source/simple.scss',
 					'css/theme/sky.css': 'css/theme/source/sky.scss',
 					'css/theme/moon.css': 'css/theme/source/moon.scss',
-					'css/theme/solarized.css': 'css/theme/source/solarized.scss'
+  				    'css/theme/solarized.css': 'css/theme/source/solarized.scss',
+					'css/theme/verifysoft.css': 'css/theme/source/verifysoft.scss'
 				}
 			}
 		},
@@ -86,7 +87,7 @@ module.exports = function(grunt) {
 
 		zip: {
 			'reveal-js-presentation.zip': [
-				'index.html',
+				'*.html',
 				'css/**',
 				'js/**',
 				'lib/**',
